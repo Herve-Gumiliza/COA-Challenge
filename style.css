@@ -1,29 +1,102 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-}
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* font-size: 20px; */
+  }
 
-body{
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background: black;
+  }
+
+  .Photo-Gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .Photo-Gallery .image-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .Photo-Gallery .livingthing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    backdrop-filter: blur(5px);
+  }
+
+  .Photo-Gallery .image-wrapper:hover img {
+    transform: scale(1.1);
+    filter: grayscale(100%);
+  }
+
+  .Photo-Gallery .image-wrapper:hover .livingthing {
+    opacity: 1;
+  }
+  .livingthing{
+    position: absolute;
+    /* bottom: 0;
+    left: 0; */
+    width: 100%;
+    /* height: 30%; Adjust height as needed */
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    /* align-items: center; */
+    color: white;
+    /* text-align: center; */
+    padding-right: 10px;
+    transition: opacity 0.4s ease;
+    backdrop-filter: blur(10px);
+    padding-left: 40px;
+    padding-bottom: 50px;
+  }
+  .blue-link {
+    color: #78e5e7; /* Sets the link color to blue */
+    text-decoration: none; /* Removes the default underline */
+    font-family: Arial, sans-serif; /* Ensures the font is consistent */
+    position: relative; /* Required for positioning the pseudo-element */
+    padding-right: 20px; /* Adds space for the arrow on the right */
 }
 
-.Photo-Gallery{
-    margin-left: 20px;
-    margin-right: 20px;
-     width: 50%;
-     /* margin: 100px auto 50px;  */
-     display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-     grid-gap: 30px; 
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+  .description {
+    display: none;
+  }
+  .Photo-Gallery {
+    height: 100vh;
+  }
+      .image-wrapper img {
+        max-width: 250px; /* Smaller maximum width for smaller screens */
+       background-size: 150%;   
+      }
+      
+     img{
+        height: 350px;
+    }   
+
+
+    .livingthing h1, .livingthing h6, .livingthing a {
+        display: none; /* Hides text in the livingthing */
+     } 
+    
 }
-.Photo-Gallery img{
-    /* width: 45%; */
-    cursor: pointer;
-    transition: 0.4s;
-}
-.Photo-Gallery img:hover{
-    transform: scale(0.8);
-    border-radius: 20px;
-    box-shadow: 0 32px 7px rgba(0, 0, 0, 0.5);
-}
+
