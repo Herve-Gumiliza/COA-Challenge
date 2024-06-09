@@ -4,28 +4,14 @@
 
 The Photo Gallery project showcases a responsive web gallery displaying images of various animals. The gallery adjusts seamlessly to different screen sizes and includes interactive hover effects that enhance user experience.
 
+My approach, I started by creating an empty repository on my github and cloned it on my local machine. After, I created index.html, style.css, and index.js files in my the visual studio code in which I later used to write codes.
+
 ## Project Description
 
 This project contains two main parts:
 
 1. **UI Challenge**: A web page with a responsive gallery that adjusts to different screen sizes.
 2. **Coding Challenges**: Solutions to two algorithmic problems.
-
-## Installation
-
-To set up the project locally, follow these steps:
-
-1. **Clone the repository**:
-   ```bash
-   git clone 
-
-2. **Navigate to the project directory**:
-   ```bash
-   cd COA-take-home-challenge
-   ```
-3. **Open the `index.html` file in a web browser**.
-4. **Browse through the photo gallery, hover over an image**
-
 
 ### Coding Challenges
 
